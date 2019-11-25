@@ -33,12 +33,12 @@ const resolvers = {
         addClap(parent, { postId }) {
             const index = posts.findIndex((element) => element.id == postId);
 
-            if (index != -1) 
+            if (index != -1) {
                 posts[index].claps += 1;
-            else 
-                return false;
+                return posts[index];
+            }
 
-            return true;
+            return null;
         }
     },
 };

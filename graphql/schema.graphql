@@ -17,5 +17,5 @@ type Query {
 
 type Mutation {
     addPost(post: AddPostInput!): Post!
-    addClap(postId: String!): Boolean 
+    addClap(postId: String!): Post 
 }
